@@ -32,4 +32,6 @@ type Profile struct {
 	State              sql.NullString
 	MaritalStatus      sql.NullString
 	AddDetails         sql.NullString
+	MobileNumber       sql.NullString
+	ProfilePhotoUrl    sql.NullString
 }

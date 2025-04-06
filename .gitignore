@@ -23,3 +23,9 @@ go.work.sum
 
 # env file
 .env
+*.pb.go
+*.pb.gw.go
+*.sql.go
+server
+tmp/
+go.mod.backup

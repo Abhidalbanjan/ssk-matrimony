@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  ssk_postgres:
+    image: postgres:17
+    container_name: ssk_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: ssk_matrimony
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - ssk_net
+
+  ssk_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ssk_server
+    depends_on:
+      - ssk_postgres
+    ports:
+      - "50051:50051"
+    environment:
+      DB_USER: root
+      DB_PASS: admin
+      DB_HOST: ssk_postgres
+      DB_PORT: 5432
+      DB_NAME: ssk_matrimony
+    networks:
+      - ssk_net
+
+volumes:
+  pgdata:
+
+networks:
+  ssk_net:
