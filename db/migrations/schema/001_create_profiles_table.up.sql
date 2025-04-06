@@ -21,5 +21,7 @@ CREATE TABLE IF NOT EXISTS profiles (
   district TEXT,
   state TEXT,
   marital_status TEXT,
-  add_details TEXT
+  add_details TEXT,
+  mobile_number TEXT,  -- New field
+  profile_photo_url TEXT -- New field
 );

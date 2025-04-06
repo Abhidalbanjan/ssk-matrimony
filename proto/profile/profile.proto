@@ -1,0 +1,116 @@
+syntax = "proto3";
+
+package proto;
+
+import "google/api/annotations.proto";
+option go_package = "github.com/Abhidalbanjan/ssk-matrimony/proto/profile;profile";
+
+service ProfileService {
+  rpc CreateProfile (CreateProfileRequest) returns (ProfileResponse) {
+    option (google.api.http) = {
+      post: "/v1/profiles"
+      body: "*"
+    };
+  }
+
+  rpc GetProfile (GetProfileRequest) returns (ProfileResponse) {
+    option (google.api.http) = {
+      get: "/v1/profiles/{user_id}"
+    };
+  }
+
+  rpc UpdateProfile (UpdateProfileRequest) returns (ProfileResponse) {
+    option (google.api.http) = {
+      put: "/v1/profiles/{user_id}"
+      body: "*"
+    };
+  }
+}
+
+message CreateProfileRequest {
+  string user_id = 1;
+  string name = 2;
+  int32 age = 3;
+  string birth_date = 4;
+  string birth_time = 5;
+  string birth_place = 6;
+  string nakshatra = 7;
+  string rashi = 8;
+  string gender = 9;
+  string height = 10;
+  string father_name = 11;
+  string mother_name = 12;
+  int32 total_family_members = 13;
+  string qualification = 14;
+  string degree = 15;
+  string college = 16;
+  string designation = 17;
+  string company_and_city = 18;
+  string city = 19;
+  string district = 20;
+  string state = 21;
+  string marital_status = 22;
+  string add_details = 23;
+  string mobile_number = 24;
+  string profile_photo_url = 25;
+}
+
+message GetProfileRequest {
+  string user_id = 1;
+}
+
+message UpdateProfileRequest {
+  string user_id = 1;
+  string name = 2;
+  int32 age = 3;
+  string birth_date = 4;
+  string birth_time = 5;
+  string birth_place = 6;
+  string nakshatra = 7;
+  string rashi = 8;
+  string gender = 9;
+  string height = 10;
+  string father_name = 11;
+  string mother_name = 12;
+  int32 total_family_members = 13;
+  string qualification = 14;
+  string degree = 15;
+  string college = 16;
+  string designation = 17;
+  string company_and_city = 18;
+  string city = 19;
+  string district = 20;
+  string state = 21;
+  string marital_status = 22;
+  string add_details = 23;
+  string mobile_number = 24;
+  string profile_photo_url = 25;
+}
+
+message ProfileResponse {
+  string user_id = 1;
+  string name = 2;
+  int32 age = 3;
+  string birth_date = 4;
+  string birth_time = 5;
+  string birth_place = 6;
+  string nakshatra = 7;
+  string rashi = 8;
+  string gender = 9;
+  string height = 10;
+  string father_name = 11;
+  string mother_name = 12;
+  int32 total_family_members = 13;
+  string qualification = 14;
+  string degree = 15;
+  string college = 16;
+  string designation = 17;
+  string company_and_city = 18;
+  string city = 19;
+  string district = 20;
+  string state = 21;
+  string marital_status = 22;
+  string add_details = 23;
+  string mobile_number = 24;
+  string profile_photo_url = 25;
+}
