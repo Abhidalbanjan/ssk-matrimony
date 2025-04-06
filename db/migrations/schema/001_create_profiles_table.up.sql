@@ -1,0 +1,27 @@
+CREATE TABLE IF NOT EXISTS profiles (
+  user_id TEXT PRIMARY KEY,
+  name TEXT,
+  age INT,
+  birth_date TEXT,
+  birth_time TEXT,
+  birth_place TEXT,
+  nakshatra TEXT,
+  rashi TEXT,
+  gender TEXT,
+  height TEXT,
+  father_name TEXT,
+  mother_name TEXT,
+  total_family_members INT,
+  qualification TEXT,
+  degree TEXT,
+  college TEXT,
+  designation TEXT,
+  company_and_city TEXT,
+  city TEXT,
+  district TEXT,
+  state TEXT,
+  marital_status TEXT,
+  add_details TEXT,
+  mobile_number TEXT,  -- New field
+  profile_photo_url TEXT -- New field
+);

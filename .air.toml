@@ -1,0 +1,7 @@
+# Config file for [Air](https://github.com/cosmtrek/air)
+# Minimal working configuration
+
+[build]
+  cmd = "go build -o ./tmp/main ./cmd/server"
+  bin = "./tmp/main"
+  include_ext = ["go", "proto", "env", "sql"]

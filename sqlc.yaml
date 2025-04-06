@@ -1,0 +1,10 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "db/queries/"         # your SQL queries
+    schema: "db/migrations/schema/"           # your table definitions (not actual live DB!)
+    gen:
+      go:
+        package: "db"
+        out: "db/generated"
+        emit_interface: true

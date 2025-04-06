@@ -1,0 +1,9 @@
+**/.git
+**/tmp
+**/bin
+**/vendor
+Dockerfile
+docker-compose.yml
+*.md
+*.toml
+*.log
